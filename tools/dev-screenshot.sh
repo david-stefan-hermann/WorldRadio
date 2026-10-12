@@ -21,8 +21,8 @@
 set -u
 cd "$(dirname "$0")/.."
 export MSYS_NO_PATHCONV=1
-export JAVA_HOME="${JAVA_HOME:-C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot}"
-export TEMP='C:\jtmp' TMP='C:\jtmp'
+if [ "${OS:-}" = Windows_NT ]; then export JAVA_HOME="${JAVA_HOME:-C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot}"; fi
+if [ "${OS:-}" = Windows_NT ]; then export TEMP='C:\jtmp' TMP='C:\jtmp'; fi
 
 SHOT="${1:-radio}"
 VIEW="${2:-0.5,-60,6.5,180,15}"

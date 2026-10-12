@@ -2,7 +2,7 @@
 # Compiles the Minecraft-free audio classes with JLayer and runs StreamProbe (args: [stream addresses]).
 set -u
 cd "$(dirname "$0")/.."
-export JAVA_HOME="${JAVA_HOME:-C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot}"
+if [ "${OS:-}" = Windows_NT ]; then export JAVA_HOME="${JAVA_HOME:-C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.4.101-hotspot}"; fi
 jdk() { "$JAVA_HOME/bin/$1" "${@:2}"; }
 JLAYER=$(cygpath -w "$(find ~/.gradle/caches/modules-2/files-2.1/javazoom/jlayer -name "jlayer-*.jar" | grep -v sources | head -1)")
 OUT=build/stream-probe
