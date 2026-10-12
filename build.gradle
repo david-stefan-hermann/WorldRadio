@@ -8,6 +8,12 @@ group = project.maven_group
 
 repositories {
     mavenCentral()
+    // bcf-guide-book-lib: `./gradlew publishToMavenLocal` in ../bcf-guide-book-lib
+    mavenLocal {
+        content {
+            includeGroup 'de.baconcakefactory'
+        }
+    }
 }
 
 loom {
@@ -28,6 +34,10 @@ dependencies {
     // MP3 decoder (LGPL, bundled unmodified as a nested jar).
     clientImplementation "javazoom:jlayer:1.0.1"
     include "javazoom:jlayer:1.0.1"
+
+    // The guide book's screen (bundled as a nested jar).
+    implementation "de.baconcakefactory:bcf-guide-book-lib:${project.guide_book_version}"
+    include "de.baconcakefactory:bcf-guide-book-lib:${project.guide_book_version}"
 }
 
 // `./gradlew runServer -PdevPortable`: the server's own test of putting a portable radio down (worldradio.DevHooks).

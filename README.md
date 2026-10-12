@@ -35,6 +35,7 @@ This page follows the book chapter by chapter and adds the details that do not f
 
 ![The guide book open on the Range & Antennas chapter](docs/book.png)
 
+<!-- listing:skip -->
 | Chapter | |
 |---|---|
 | [Getting Started](#getting-started) | three steps to the first station |
@@ -45,6 +46,7 @@ This page follows the book chapter by chapter and adds the details that do not f
 | [Listening](#listening) | volume, several radios, direction |
 
 Not in the book: [Limits](#limits), [Config](#config), [Commands](#commands-operators), [Building](#building).
+<!-- listing:end -->
 
 ## Getting Started
 
@@ -366,9 +368,12 @@ tooltips come from the player's own file.
   channel sends, which signals an amplifier or radio receives, a radio's hearing range and speakers, what it is set
   to and whether it plays.
 
+<!-- listing:skip -->
 ## Building
 
-Java 25, `./gradlew build` → `build/libs/worldradio-<version>.jar`. Needs Fabric API on client and server.
+Java 25, `./gradlew build` → `build/libs/worldradio-<version>.jar`. Needs Fabric API on client and server, and
+[bcf-guide-book-lib](https://github.com/david-stefan-hermann/bcf-guide-book-lib) in the local Maven repository first:
+`./gradlew publishToMavenLocal` in a checkout of it.
 
 Test tools in `tools/`: `test-signal.sh` (signal graph, antenna range and level, volume and reception curves, what a
 portable radio picks up, source choice – plain Java), `stream-probe.sh` (decodes live streams outside
@@ -385,14 +390,16 @@ texture and build pictures; preview in `art/book/`), `java tools/MakeLogo.java <
 rendered from the block textures; previews in `art/logo/`).
 
 The guide book's content is data in `src/main/java/worldradio/item/GuideBook.java` (chapters of sections) with the
-texts under `worldradio.book.*` in the language files; the recipes on its pages are read from the mod's own recipe
-files. The `docs/book-*.png` pictures on this page are the book's build pictures on paper, three times enlarged.
+texts under `worldradio.book.*` in the language files; its screen comes from bcf-guide-book-lib, and the recipes on
+its pages are read from the mod's own recipe files. The `docs/book-*.png` pictures on this page are the book's build
+pictures on paper, three times enlarged.
+<!-- listing:end -->
 
 ## Credits
 
 - MP3 decoding: [JLayer](https://github.com/umjammer/jlayer) 1.0.1 by JavaZOOM (LGPL 2.1), bundled unmodified.
 - Station catalogue: [Radio-Browser](https://www.radio-browser.info) community database.
 
-## Licence
+## License
 
 MIT, see [LICENSE](LICENSE). By BaconCakeFactory.

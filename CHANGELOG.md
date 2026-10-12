@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.2.0
+- The **World Radio Guide** is now drawn by the guide book library shared by all BaconCakeFactory mods (bundled in the jar, nothing extra to install). Pages and texts are the same; the chapter tabs are drawn in the paper's colour and the page buttons in ivory instead of piano keys, as in the other mods' books.
+
 ## 2.1.1
 - A **Portable Radio** that is put down is heard as far as a Radio now: 4 blocks instead of 10 (the config entry `portableHearing` of 2.1.0 is gone).
 - Speakers make it heard further only when it **stands on top of one**; more speakers can be chained to that one as usual. Speakers beside or above it no longer count.

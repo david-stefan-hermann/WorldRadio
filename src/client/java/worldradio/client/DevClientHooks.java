@@ -1,5 +1,6 @@
 package worldradio.client;
 
+import bcf.guidebook.client.GuideBookScreen;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.Screenshot;
@@ -10,7 +11,6 @@ import worldradio.client.audio.SourceTracker;
 import worldradio.client.audio.StationStream;
 import worldradio.client.audio.StreamPool;
 import worldradio.client.screen.AmplifierScreen;
-import worldradio.client.screen.GuideBookScreen;
 import worldradio.client.screen.RadioScreen;
 import worldradio.client.screen.TunerScreen;
 
@@ -151,7 +151,7 @@ public final class DevClientHooks {
             return;
         }
         if (p[0].trim().equals("book")) {
-            minecraft.gui.setScreen(new GuideBookScreen(0));
+            minecraft.gui.setScreen(new GuideBookScreen(worldradio.item.GuideBook.BOOK, 0));
             return;
         }
         if (p[0].trim().equals("sounds")) {

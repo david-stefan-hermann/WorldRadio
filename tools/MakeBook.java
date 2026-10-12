@@ -16,8 +16,8 @@ import java.util.Random;
 public class MakeBook extends MakeGuiTextures {
     static final Path TEXTURES = Path.of("src/main/resources/assets/worldradio/textures");
     static final Path ART = Path.of("art/book");
-    /** The screen's measures, copied from GuideBookScreen. */
-    static final int W = 232, H = 230, MARGIN = 8, FOOTER = 26, TAB_W = 26, TAB_H = 24, TAB_GAP = 3;
+    /** The screen's measures, copied from BookStyle of bcf-guide-book-lib. */
+    static final int W = 232, H = 230, MARGIN = 8, FOOTER = 24, TAB_W = 26, TAB_H = 24, TAB_GAP = 3;
     static final int WOOD = 0x8A5A32, GOLD = 0xC8A050, GOLD_LIGHT = 0xF1D9A0, PAPER = 0xF1E6CC, PAPER_EDGE = 0xD9C9A2;
     static final int TITLE = 0x4A2A12, HEADING = 0xB45A14, BODY = 0x2A2018, SOFT = 0x7A6A52;
     static final int ORANGE = 0xFB923C, BLUE = 0x60A5FA, RING = 0x9A7A3A;
@@ -211,10 +211,10 @@ public class MakeBook extends MakeGuiTextures {
         y = paragraph(g, f, "\"The higher the mast, the further the music.\"", x, y, width, SOFT);
         f.draw(g, "Antenna blocks", x, y + 3, HEADING, false);
         put(g, pictures[0], x + (width - 96) / 2, y + 15);
-        button(g, keys[0], left + MARGIN, top + H - FOOTER + 4, 22, 18, "<", theme.colours(), f, false);
-        button(g, keys[1], left + W - MARGIN - 22, top + H - FOOTER + 4, 22, 18, ">", theme.colours(), f, false);
+        button(g, keys[0], left + MARGIN, top + H - FOOTER + 2, 22, 18, "<", theme.colours(), f, false);
+        button(g, keys[1], left + W - MARGIN - 22, top + H - FOOTER + 2, 22, 18, ">", theme.colours(), f, false);
         String number = "8 / 14";
-        f.draw(g, number, left + (W - f.width(number)) / 2, top + H - FOOTER + 9, 0xFFF4DC, true);
+        f.draw(g, number, left + (W - f.width(number)) / 2, top + H - FOOTER + 7, 0xFFF4DC, true);
 
         int px = left + W + TAB_W + 12;
         for (int i = 0; i < pictures.length; i++) {
