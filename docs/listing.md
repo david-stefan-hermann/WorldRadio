@@ -17,7 +17,7 @@ you paste, and your own list of favorites comes with you into every world. Every
 
 ## Download
 
-Get `worldradio-<version>.jar` from [Modrinth](https://modrinth.com/mod/world-radio), [CurseForge](https://www.curseforge.com/projects/1711984) or the
+Get `worldradio-<version>.jar` from [CurseForge](https://www.curseforge.com/minecraft/mc-mods/world-radio) or the
 [GitHub releases](https://github.com/david-stefan-hermann/world-radio/releases) and put it into `mods/` on the client and the server, next to Fabric API.
 Requires Minecraft 26.2, Fabric Loader 0.19.3+ and Java 25. The server never streams anything: it only stores
 which station a transmitter sends and what each radio is set to, every player's game fetches the stream itself.
